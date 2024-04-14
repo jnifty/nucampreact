@@ -1,12 +1,11 @@
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 import './App.css';
-import CampsitesList from './features/campsites/CampsiteList.js'
-import { CAMPSITES } from './app/shared/CAMPSITES.js';
-import {Routes, Route } from 'react-router-dom'
-import HomePage from './pages/homepage.js';
-import ContactPage from './pages/ContactPage.js';
-import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage.js'
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage';
+import ContactPage from './pages/ContactPage';
+import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage'
+import CampsiteDetailPage from './pages/CampsiteDetailPage';
 
 function App() {
     return (
@@ -16,6 +15,10 @@ function App() {
                 <Route path='/' element={<HomePage />} />
                 <Route path='contact' element={<ContactPage />} />
                 <Route pat='directory' element={<CampsitesDirectoryPage />} />
+                <Route
+                    path='directory/:campsiteId'
+                    element={<CampsiteDetailPage />}
+                />
             </Routes>
             <Footer />
         </div>
