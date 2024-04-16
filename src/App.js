@@ -20,7 +20,7 @@ function App() {
                     path='directory/:campsiteId'
                     element={<CampsiteDetailPage />}
                 />
-                <Route path='about' component={<AboutPage />} />
+                <Route path='about' element={<AboutPage />} />
             </Routes>
             <Footer />
         </div>
