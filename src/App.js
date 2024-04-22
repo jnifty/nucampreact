@@ -15,7 +15,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<HomePage />} />
                 <Route path='contact' element={<ContactPage />} />
-                <Route pat='directory' element={<CampsitesDirectoryPage />} />
+                <Route path='directory' element={<CampsitesDirectoryPage />} />
                 <Route
                     path='directory/:campsiteId'
                     element={<CampsiteDetailPage />}
