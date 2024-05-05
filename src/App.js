@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 import './App.css';
@@ -7,8 +9,17 @@ import ContactPage from './pages/ContactPage';
 import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage'
 import CampsiteDetailPage from './pages/CampsiteDetailPage';
 import AboutPage from './pages/AboutPage.js';
+import { fetchCampsites } from './features/campsites/campsitesSlice.js';
+
 
 function App() {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchCampsites());
+    }, [dispatch]);
+    
+    
     return (
         <div className='App'>
             <Header />
